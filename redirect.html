@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/a73bf35d-038e-4953-ae51-181cf47355a3/favicon.ico?v=1718378647344">
+</head>
+<body>
+  <header>
+    <img src="https://cdn.glitch.global/a73bf35d-038e-4953-ae51-181cf47355a3/Aarondoran.png?v=1718376930972" alt="Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/r/aaron">Aaron Doran</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Redirecting you to the original URL...</h1>
+    <p>If you are not redirected automatically, <a href="{{originalUrl}}">click here</a>.</p>
+  </div>
+  <script>
+    setTimeout(() => {
+      window.location.href = "{{originalUrl}}";
+    }, 3000);
+  </script>
+</body>
+</html>

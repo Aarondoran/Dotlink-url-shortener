@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - URL Shortener</title>
+  <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/a73bf35d-038e-4953-ae51-181cf47355a3/favicon.ico?v=1718378647344">
+</head>
+<body>
+  <header>
+    <img src="https://cdn.glitch.global/a73bf35d-038e-4953-ae51-181cf47355a3/Aarondoran.png?v=1718376930972" alt="Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/r/aaron">Aaron Doran</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>About This URL Shortener</h1>
+    <p>This URL shortener service was created to provide a simple way to shorten long URLs. The project is built using Node.js and Fastify, and it includes features like:</p>
+    <ul>
+      <li>Shortening long URLs</li>
+      <li>Ensuring URLs start with "https://"</li>
+      <li>Preventing the use of blacklisted terms</li>
+      <li>Providing an API for programmatic access</li>
+    </ul>
+    <p>We hope you find this service useful!</p>
+    
+    <h2>API Documentation</h2>
+    <p>Our URL shortener service provides an API to allow programmatic access to the URL shortening functionality. Below are the details:</p>
+
+    <h3>Shorten URL</h3>
+    <p><strong>Endpoint:</strong> <code>POST /api/shorten</code></p>
+    <p><strong>Request Body:</strong></p>
+    <pre>{
+  "originalUrl": "https://example.com"
+}</pre>
+    <p><strong>Response:</strong></p>
+    <p>If successful:</p>
+    <pre>{
+  "shortUrl": "https://dotlink.glitch.me/r/shortenedCode"
+}</pre>
+    <p>If the URL contains a blacklisted term:</p>
+    <pre>{
+  "error": "URL contains blacklisted term/phrase"
+}</pre>
+  </div>
+</body>
+</html>
